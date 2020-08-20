@@ -7,12 +7,7 @@ metadata:
   labels:
     app: podinfo
   annotations:
-    fluxcd.io/automated: "true"
-    fluxcd.io/tag.init: glob:1.4.*
-    fluxcd.io/tag.podinfod: glob:1.4.*
-    fluxcd.io/locked_user: Roman Kutyin <rkutin@satelliz.com>
-    fluxcd.io/locked: 'true'
-    fluxcd.io/locked_msg: 1.4.2 does not work for us
+    fluxcd.io/automated: "false"
 spec:
   strategy:
     rollingUpdate:
@@ -31,7 +26,7 @@ spec:
     spec:
       initContainers:
       - name: init
-        image: alpine:3.10
+        image: alpine:3.12
         command:
         - sleep
         - "1"
