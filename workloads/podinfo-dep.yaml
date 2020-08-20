@@ -6,8 +6,6 @@ metadata:
   namespace: demo
   labels:
     app: podinfo
-  annotations:
-    fluxcd.io/automated: "false"
 spec:
   strategy:
     rollingUpdate:
